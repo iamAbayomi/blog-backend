@@ -1,18 +1,18 @@
 module.exports = (app) => {
-    const ratings = require('../controller/ratings.controller')
+    const ratings = require('../controller/rating.controller')
     const router = require('express').Router()
   
     // Create a new Ratings for Users
-    router.post('/', ratings.createRatings)
+    router.post('/', ratings.createRating)
   
     // Retrieve the all ratings of one User
-    router.get('/:post_id', ratings.findAllRatings)
+    router.get('/:post_id', ratings.findAllRating)
   
     // Retrieve one rating for one user
-    router.get('/userratings/:rating_id', ratings.findSingleRatings)
+    router.get('/userratings/:rating_id', ratings.findSingleRating)
   
     // Update Ratings
-    router.put('/:rating_id', ratings.updateRatings)
+    router.put('/:rating_id', ratings.updateRating)
   
     // Delete Ratings
     router.delete('/:rating_id', ratings.deleteRating)
