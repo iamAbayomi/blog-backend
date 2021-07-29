@@ -12,9 +12,6 @@ module.exports = ( sequelize ,Sequelize)=>{
         },
         post_description: {
             type: Sequelize.STRING
-        },
-        rating: {
-            type: Sequelize.STRING
         }
     })
     return Posts
