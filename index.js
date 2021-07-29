@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const port = process.env.PORT || 3000;
 
 // Init body-parser options (inbuilt with express)
 app.use(express.json())
@@ -10,11 +10,11 @@ const db = require('./models')
 db.sequelize.sync({ alter: true })
 
 
-app.get('/', (req, res) => {
-    res.send({
-        "message": 'Fola is crazyyling good'
-    })
-})
+// app.get('/', (req, res) => {
+//     res.send({
+//         "message": 'Fola is crazyyling good'
+//     })
+// })
 
 require('./routes/user.routes')(app)
 require('./routes/post.routes')(app)
