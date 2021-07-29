@@ -39,9 +39,11 @@ db.sequelize = sequelize
 db.user = require('../models/user.models')(sequelize, Sequelize)
 db.post = require('../models/post.models')(sequelize, Sequelize)
 db.comments = require('../models/comment.models')(sequelize, Sequelize)
+db.rating = require('../models/rating.models')(sequelize, Sequelize)
 
 db.user.hasMany(db.post, { foreignKey: 'user_id' })
 db.user.hasMany(db.comments, { foreignKey: 'user_id' })
 db.post.hasMany(db.comments, { foreignKey: 'product_id' })
+db.post.hasMany(db.rating, { foreignKey: 'product_id' })
 
 module.exports = db

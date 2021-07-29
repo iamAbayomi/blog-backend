@@ -7,7 +7,7 @@ module.exports = ( sequelize ,Sequelize)=>{
             notEmpty: true,
             primaryKey: true
         },
-        name: {
+        comment_name: {
             type: Sequelize.STRING
         },
         comment_message: {
