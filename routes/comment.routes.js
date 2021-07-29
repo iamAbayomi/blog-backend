@@ -6,16 +6,16 @@ module.exports = (app) => {
     router.post('/', comment.createComment)
   
     // Retrieve the all comment of one User
-    router.get('/:user_id', comment.findAllComment)
+    router.get('/:post_id', comment.findAllComment)
   
-    // Retrieve one note for one user
-    router.get('/usercomment/:note_id', comment.findSingleComment)
+    // Retrieve one comment for one user
+    router.get('/usercomment/:comment_id', comment.findSingleComment)
   
     // Update Comment
-    router.put('/:note_id', comment.updateComment)
+    router.put('/:comment_id', comment.updateComment)
   
     // Delete Comment
-    router.delete('/:note_id', comment.deleteComment)
+    router.delete('/:comment_id', comment.deleteComment)
   
     app.use('/apis/comment', router)
   }

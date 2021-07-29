@@ -6,7 +6,7 @@ module.exports = (app) => {
     router.post('/', ratings.createRatings)
   
     // Retrieve the all ratings of one User
-    router.get('/:user_id', ratings.findAllRatings)
+    router.get('/:post_id', ratings.findAllRatings)
   
     // Retrieve one rating for one user
     router.get('/userratings/:rating_id', ratings.findSingleRatings)
