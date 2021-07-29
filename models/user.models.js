@@ -32,9 +32,6 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: false,
         unique: true
         // notEmpty: true
-      },
-      isAuthor: {
-        type: Sequelize.BOOLEAN
       }
     })
     return User
