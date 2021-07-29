@@ -1,5 +1,5 @@
 const db = require('../models/index')
-const Ratings = db.ratings
+const Rating = db.rating
 
 
 exports.createRating = (req, res) => {
