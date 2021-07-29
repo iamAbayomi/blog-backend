@@ -36,6 +36,10 @@ db.Sequelize = Sequelize
 db.sequelize = sequelize
 
 
-db.user = require('./user.models')(sequelize, Sequelize)
+db.user = require('../models/user.models')(sequelize, Sequelize)
 db.post = require('../models/post.models')(sequelize, Sequelize)
 db.comments = require('../models/comment.models')(sequelize, Sequelize)
+
+db.user.hasMany(db.post, { foreignKey: 'user_id' })
+db.user.hasMany(db.comments, { foreignKey: 'user_id' })
+db.post.hasMany(db.comments, { foreignKey: 'product_id' })
