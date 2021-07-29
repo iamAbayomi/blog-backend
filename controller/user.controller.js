@@ -301,7 +301,7 @@ exports.findAllUsers = (req, res) => {
     .then((data) => {
       res.send(data)
     }).catch((err) => {
-      res.status(500).send({
+      res.status(500).send({ 
         message: 'Error retrieving Tutorial with id=' + err
       })
     })
