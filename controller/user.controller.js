@@ -42,8 +42,7 @@ exports.createUser = [([
         return Promise.reject('This email has been registered. Please use another one')
       }
     })
-  }),
-  body('provider').isLength({ min: 1 })
+  })
 ]),
 
 (req, res) => {
@@ -58,7 +57,6 @@ exports.createUser = [([
     firstname: req.body.firstname,
     surname: req.body.surname,
     password: req.body.password,
-    provider: req.body.provider,
     email: req.body.email,
   }
 
