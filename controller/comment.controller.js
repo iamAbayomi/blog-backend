@@ -1,5 +1,5 @@
 const db = require('../models/index')
-const Comments = db.comments
+const Comment = db.comments
 
 
 exports.createComment = (req, res) => {
