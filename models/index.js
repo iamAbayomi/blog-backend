@@ -34,3 +34,8 @@ const db = {}
 
 db.Sequelize = Sequelize
 db.sequelize = sequelize
+
+
+db.user = require('./user.models')(sequelize, Sequelize)
+db.post = require('../models/post.models')(sequelize, Sequelize)
+db.comments = require('../models/comment.models')(sequelize, Sequelize)
