@@ -1,5 +1,5 @@
 const db = require('../models/index')
-const Posts = db.post
+const Post = db.post
 
 
 exports.createPost = (req, res) => {
