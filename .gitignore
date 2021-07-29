@@ -95,5 +95,8 @@ sw.*
 # Vim swap files
 *.swp
 
+# DB Configuration files
+db.config.js
+
 # Heroku Configuration files
 heroku.config.js
