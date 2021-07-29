@@ -8,14 +8,14 @@ module.exports = (app) => {
     // Retrieve the all post of one User
     router.get('/:user_id', post.findAllPost)
   
-    // Retrieve one note for one user
-    router.get('/userpost/:note_id', post.findSinglePost)
+    // Retrieve one post for one user
+    router.get('/userpost/:post_id', post.findSinglePost)
   
     // Update Post
-    router.put('/:note_id', post.updatePost)
+    router.put('/:post_id', post.updatePost)
   
     // Delete Post
-    router.delete('/:note_id', post.deletePost)
+    router.delete('/:post_id', post.deletePost)
   
     app.use('/apis/post', router)
   }
