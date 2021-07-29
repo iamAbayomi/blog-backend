@@ -11,7 +11,7 @@ module.exports = ( sequelize ,Sequelize)=>{
             type: Sequelize.STRING
         },
         post_description: {
-            type: Sequelize.STRING
+            type: Sequelize.TEXT
         }
     })
     return Posts
