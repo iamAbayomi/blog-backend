@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }))
 const db = require('./models')
 db.sequelize.sync({ alter: true })
 
-require('./cors')(app)
+require('./utilities/cors')(app)
 
 // app.get('/', (req, res) => {
 //     res.send({
