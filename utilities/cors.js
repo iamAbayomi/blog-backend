@@ -1,5 +1,5 @@
 module.exports = (app) => {
-  const cors = require('core-js')
+  const cors = require('cors')
 
   const allowedOrigins = ['http://localhost:3000','http://localhost:4000',
     'https://spiinge.com', 'https://www.spiinge.com', 'https://spiinge.appspot.com/']
