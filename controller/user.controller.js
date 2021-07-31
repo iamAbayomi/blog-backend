@@ -14,20 +14,20 @@ const serverResponse = require('../utilities/response')
 // method for creating tokens
 // Create and Save a new User
 exports.createUser = [([
-  body('fullname').isLength({ min: 1 }),
-  body('fullname').custom((value) => {
-    return User.findAll({
-      where: {
-        fullname: value
-      }
-    }).then((data) => {
-      console.log('The data from the db ' + data)
-      if (data != 0) {
-        // res.json({ message: 'Hello I am here ' + data })
-        return Promise.reject(value + ' has been taken. Please use another one')
-      }
-    })
-  }),
+  // body('fullname').isLength({ min: 1 }),
+  // body('fullname').custom((value) => {
+  //   return User.findAll({
+  //     where: {
+  //       fullname: value
+  //     }
+  //   }).then((data) => {
+  //     console.log('The data from the db ' + data)
+  //     if (data != 0) {
+  //       // res.json({ message: 'Hello I am here ' + data })
+  //       return Promise.reject(value + ' has been taken. Please use another one')
+  //     }
+  //   })
+  // }),
   body('password').isLength({ min: 1 }),
   body('email').isEmail(),
   body('email').custom((value) => {
