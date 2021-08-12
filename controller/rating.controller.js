@@ -1,5 +1,6 @@
 const db = require('../models/index')
 const Rating = db.rating
+const sequelize = db.sequelize
 
 
 exports.createRating = (req, res) => {
@@ -36,6 +37,19 @@ exports.createRating = (req, res) => {
           message: 'Error retrieving rating for the user=' + err
         })
       })
+  }
+
+  exports.findAveragRating = (req, res) =>{
+    const post_id = req.params.post_id
+    sequelize.query("SELECT AVG(rating_value) FROM ratings WHERE post_id = " + post_id)
+    .then((data) => {
+      res.send(data)
+    }).catch((err) => {
+      res.status(500).send({
+          message: 'Error retrieving rating for the user=' + err
+        })
+    })
+
   }
   
   // Retrieve single rating from database

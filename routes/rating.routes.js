@@ -8,6 +8,9 @@ module.exports = (app) => {
     // Retrieve the all ratings of one User
     router.get('/:post_id', ratings.findAllRating)
   
+    // Get the average rating of the post.
+    router.get('/avg/:post_id', ratings.findAveragRating)
+
     // Retrieve one rating for one user
     router.get('/userratings/:rating_id', ratings.findSingleRating)
   
