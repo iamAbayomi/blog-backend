@@ -1,7 +1,7 @@
 module.exports = (app) => {
   const cors = require('cors')
 
-  const allowedOrigins = ['http://localhost:3000','http://localhost:4000', 'https://a-blog-in-react.netlify.app/',"*" ,
+  const allowedOrigins = ['http://localhost:3000','http://localhost:4000', 'https://a-blog-in-react.netlify.app',"*" ,
     'https://spiinge.com', 'https://www.spiinge.com', 'https://spiinge.appspot.com/']
 
   app.use(cors({
